@@ -8,9 +8,9 @@ import { GithubIcon } from "@/components/Icons";
 import project1 from "../../public/images/projects/app.png";
 import eProject from "../../public/images/projects/image-3.png";
 import sProject from "../../public/images/projects/socialProject.avif";
-import nProject from "../../public/images/projects/nike.jpg";
-import n1Project from "../../public/images/projects/url.jpeg";
-import n2Project from "../../public/images/projects/langauge.jpg";
+import nProject from "../../public/images/projects/resume-preview.png";
+// import n1Project from "../../public/images/projects/url.jpeg";
+// import n2Project from "../../public/images/projects/langauge.jpg";
 
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
@@ -25,16 +25,17 @@ const FeaturedPorject = ({ type, title, summary, img, link, githubLink }) => {
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
+        className="relative w-1/2 aspect-video cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
         <FramerImage
           src={img}
           alt={title}
-          className="w-full h-auto"
+          fill
+          className="object-cover"
           priority
           sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                33vw"
+          (max-width: 1200px) 50vw,
+          33vw"
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
@@ -155,6 +156,38 @@ const projects = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-4">
             <div className="col-span-12">
               <FeaturedPorject
+                title="AI Resume builder"
+                summary="An AI-powered resume builder that helps users create professional resumes with ease."
+                link="https://resume-builder-n6ld010s9-anup4944s-projects.vercel.app/"
+                type="Featured Project"
+                img={nProject}
+                githubLink="https://github.com/Anup4944/resume-builder"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12 ">
+              <Project
+                title="Social Media App"
+                summary="This project encompasses robust functionalities including Like/Unlike posts, Follow/Unfollow users, comprehensive CRUD operations for posts and profile data, and secure password management with Forgot/Reset/Update capabilities. Additionally, the application is optimized for mobile responsiveness to ensure seamless user experience across all devices."
+                link="https://vinstagram-two.vercel.app/"
+                type="Project"
+                img={sProject}
+                githubLink="https://github.com/Anup4944/vinstagram"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              {" "}
+              <Project
+                title="Tier list app"
+                summary="This web application facilitates appointment scheduling between clients and advisors. Clients can log in using their Google account for authentication, while advisors can register, set availability, and manage appointments."
+                link="https://tier-list-lac-iota.vercel.app/"
+                type="Project"
+                img={project1}
+                githubLink="https://github.com/Anup4944/tier-list"
+              />
+            </div>
+            <div className="col-span-12">
+              {" "}
+              <FeaturedPorject
                 title="E-commerce Website"
                 summary="A feature-rich E-commerce Website using React, Overlay navbar, Stripe, React/Redux, NodeJS, MongoDb and Recharts."
                 link="https://estore-1rqj.onrender.com/"
@@ -163,39 +196,7 @@ const projects = () => {
                 githubLink="https://github.com/Anup4944/e-commerce"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12 ">
-              <Project
-                title="Social Media App"
-                summary="This project encompasses robust functionalities including Like/Unlike posts, Follow/Unfollow users, comprehensive CRUD operations for posts and profile data, and secure password management with Forgot/Reset/Update capabilities. Additionally, the application is optimized for mobile responsiveness to ensure seamless user experience across all devices."
-                link="https://mysocialapp.onrender.com/"
-                type="Project"
-                img={sProject}
-                githubLink="https://github.com/Anup4944/Social"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="Appoinment Booking App"
-                summary="This web application facilitates appointment scheduling between clients and advisors. Clients can log in using their Google account for authentication, while advisors can register, set availability, and manage appointments."
-                link="https://bookingwithadvisor.vercel.app"
-                type="Project"
-                img={project1}
-                githubLink="https://github.com/Anup4944/appointment-booking-app"
-              />
-            </div>
-            <div className="col-span-12">
-              {" "}
-              <FeaturedPorject
-                title="Nike Website Clone"
-                summary="Nike webiste build using React, Tailwind CSS and deploy on Vercel"
-                link="https://nike-store-clone-jet.vercel.app/"
-                type="Featured Project"
-                img={nProject}
-                githubLink="https://github.com/Anup4944/nike-store-clone"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
+            {/* <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
                 title="Language Learning Website"
@@ -216,7 +217,7 @@ const projects = () => {
                 img={n1Project}
                 githubLink=""
               />
-            </div>
+            </div> */}
           </div>
         </Layout>
       </main>

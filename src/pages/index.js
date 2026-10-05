@@ -37,9 +37,9 @@ export default function Home() {
               />
               <h1></h1>
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-                Hello, 👋 I design and develop services for customers of all
-                sizes, specializing in creating stylish, modern websites, web
-                services and online stores.
+                Hello, 👋 Full-stack developer with hands-on experience
+                designing and building modern, scalable web applications
+                end-to-end.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
