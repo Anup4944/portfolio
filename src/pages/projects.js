@@ -10,7 +10,7 @@ import eProject from "../../public/images/projects/image-3.png";
 import sProject from "../../public/images/projects/socialProject.avif";
 import nProject from "../../public/images/projects/resume-preview.png";
 // import n1Project from "../../public/images/projects/url.jpeg";
-// import n2Project from "../../public/images/projects/langauge.jpg";
+import n2Project from "../../public/images/projects/langauge.jpg";
 
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
@@ -177,12 +177,12 @@ const projects = () => {
             <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
-                title="Tier list app"
-                summary="This web application facilitates appointment scheduling between clients and advisors. Clients can log in using their Google account for authentication, while advisors can register, set availability, and manage appointments."
-                link="https://tier-list-lac-iota.vercel.app/"
+                title="Job Tracking Application"
+                summary="This web application allows users to track their job application."
+                link="https://my-job-application-tracker.vercel.app/"
                 type="Project"
-                img={project1}
-                githubLink="https://github.com/Anup4944/tier-list"
+                img={n2Project}
+                githubLink="https://github.com/Anup4944/my-job-app-tracker"
               />
             </div>
             <div className="col-span-12">
@@ -196,18 +196,18 @@ const projects = () => {
                 githubLink="https://github.com/Anup4944/e-commerce"
               />
             </div>
-            {/* <div className="col-span-6 sm:col-span-12">
+            <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
-                title="Language Learning Website"
-                summary="This web application allows users to choose from a variety of languages such as Japanese, Hindi, Spanish, French, Greek, Chinese, and German, and learn different words with audio pronunciation."
-                link="https://words-react.vercel.app/"
+                title="Tier list app"
+                summary="This web application facilitates appointment scheduling between clients and advisors. Clients can log in using their Google account for authentication, while advisors can register, set availability, and manage appointments."
+                link="https://tier-list-lac-iota.vercel.app/"
                 type="Project"
-                img={n2Project}
-                githubLink="https://github.com/Anup4944/words-react"
+                img={project1}
+                githubLink="https://github.com/Anup4944/tier-list"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
+            {/* <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
                 title="Url shortner"
